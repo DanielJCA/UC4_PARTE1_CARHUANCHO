@@ -1,20 +1,8 @@
 from django.shortcuts import render, HttpResponse
 # Create your views here.
 layout = """
-    <h1> Proyecto Web (LP3) | Flor Cerdán </h1>
-    <hr/>
-    <ul>
-    <li>
-    <a href="/inicio"> Inicio</a>
-    </li>
-    <li>
-    <a href="/saludo"> Mensaje de Saludo</a>
-    </li>
-    <li>
-    <a href="/rango"> Mostrar Números [a,b]</a>
-    </li>
-    </ul>
-    <hr/>
+    <h1> Listado de carreras</h1>
+ 
     """
 
 def index(request):
@@ -24,16 +12,13 @@ def index(request):
 def saludo(request):
     return render(request,'saludo.html')
 
+
+    
 def rango(request):
-    a = 10
-    b = 20
-    resultado = f"""
-<h2> Numeros de [{a},{b}] </h2>
-Resultado: <br>
-<ul>
-"""
-    while a<=b:
-        resultado += f"<li> {a} </li>"
-        a+=1
-    resultado += "</ul"
-    return HttpResponse(layout + resultado)
+    return render(request,'rango.html')
+
+def rango2(request):
+    return render(request,'rango2.html')   
+
+def rango3(request):
+    return render(request,'rango3.html')   
