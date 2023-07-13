@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+</head>
+
+<body>
+    
+<header>
+    <div id="logotipo">
+        <h1> UNIVERSIDAD NACIONAL TECNOLÓGICA DE LIMA SUR </h1>
+    </div>
+</header>
+    <ul>
+        <li>
+            <a href="/inicio"> CURSOS</a>
+        </li>
+        <li>
+            <a href="/saludo"> CREAR CURSO</a>
+        </li>
+        <li>
+            <a href="/rango"> CARRERAS</a>
+        </li>
+        <li>
+            <a href="/rango2/10/15"> CREAR CARRERAS]</a>
+        </li>
+    </ul>
+    <hr />
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <footer>
+        UNTELS - Lenguaje de Programación III &copy; Daniel Carhuancho
+    </footer>
+</body>
+
+</html>
